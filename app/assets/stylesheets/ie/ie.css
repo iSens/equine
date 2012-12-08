@@ -1,0 +1,14 @@
+h4.ieTitle {
+    background: url("https://equinecanada.s3.amazonaws.com/img/magazineTitle.jpg") no-repeat scroll 0 0 transparent;
+    height: 37px;
+    margin: 5px 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+.ieLink a {
+	background: url("https://equinecanada.s3.amazonaws.com/img/viewOnline.jpg") no-repeat scroll 0 0 transparent;
+    height: 27px;
+    margin: 5px 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}

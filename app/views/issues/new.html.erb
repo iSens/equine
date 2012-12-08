@@ -1,0 +1,12 @@
+<div id="wrapp">
+<% if current_user %>
+<h1>New issue</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', issues_path %>
+
+<% else %>
+<%= link_to "Log In", login_path %>
+<% end %>
+</div>

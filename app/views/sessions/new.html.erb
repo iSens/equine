@@ -1,0 +1,23 @@
+<div id="wrapp">
+<%= form_tag sessions_path do %> 
+<fieldset>
+<legend>Log in</legend>
+<% flash.each do |name, msg| %>
+<div class="alert alert<%= name == :notice ? "-success" : "-error" %>"> 
+	<%= msg %>
+</div>
+<% end %>
+<div class="control-group">
+	<p>  
+	    <%= label_tag :email %>
+	    <%= text_field_tag :email, params[:email] %>  
+	  </p>  
+	  <p>  
+	    <%= label_tag :password %> 
+	    <%= password_field_tag :password %>  
+	  </p>  
+	  <p><%= submit_tag %></p>
+</div>
+</fieldset>
+<% end %>
+</div>

@@ -1,0 +1,72 @@
+<div id="fb-root"></div>
+    <script type="text/javascript">
+        window.fbAsyncInit = function () {
+            FB.init({ appId: '168952596567340',
+                status: true,
+                cookie: true,
+                xfbml: true
+            });
+
+            //Autoresize iFrame               
+            FB.Canvas.setAutoResize();
+        };
+    (function () {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js#xfbml=1';
+        document.getElementById('fb-root').appendChild(e);
+    } ());
+    </script>
+
+<div id="wrapp">
+	<div id="admin">
+	<% if current_user %><%= link_to 'New Issue', new_issue_path %>  |  <a href="/">Logged in as <%= current_user.email %></a>  |  <%= link_to("Logout", :controller => "sessions", :action => 'destroy') %> 
+		<% else %>
+	<% end %>
+	</div>
+<div class="intro">
+  <h2>Equine Canada Magazine Online Edition</h2>
+  <p>Equine Canada is proud to present our official magazine, Equine Canada Magazine. The diversity of its contents truly represents the makeup of the equestrian community. Follow news and events of your favourite discipline including regular updates of the following:     Dressage, Driving, Endurance, Eventing, Hunter/Jumper, Para Equestrian, Recreation/Trail, Reining, Vaulting </p>
+  <p>Stay on top of current Equine Canada information as well as breeds and industry news and special features by subscribing now.</p>
+</div>
+<div class="popular">
+  <h4 class="i_publication ieTitle">Equine Canada Magazine</h4>
+	
+	<img id = "share_button" src = "https://equinecanada.s3.amazonaws.com/img/share.png">
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$('#share_button').live('click', function(e){
+	e.preventDefault();
+	FB.ui(
+	{
+	method: 'feed',
+	name: 'Equine Canada Magazine',
+	link: ' http://www.equinecanada.ca/',
+	picture: 'https://equinecanada.s3.amazonaws.com/img/share90x90.jpg',
+	caption: 'Equine Canada Magazine Online Edition',
+	description: 'Equine Canada is proud to present our official magazine, Equine Canada Magazine. The diversity of its contents truly represents the makeup of the equestrian community.',
+	message: ''
+	});
+	});
+	});
+	</script>
+<div id="over">
+  <ul class="magazine">
+<% @issues.each do |issue| %>
+   <li class="magBg"><span class="titleM"><%= issue.title %></span>
+	<%= image_tag issue.photo.url(:original) %>
+	<span class="onlineLink ie_link"><%= link_to 'View online', issue.m_link, :target => '_blank' %></span>
+	<% if current_user %>
+	<%= link_to 'Edit', edit_issue_path(issue) %>  |  <%= link_to 'Destroy', issue, confirm: 'Are you sure?', method: :delete %>
+	<% else %>
+<% end %>
+	</li>
+<% end %>
+  </ul>
+</div>
+</div>
+<div class="bottom"><p> For more information about this fantastic magazine, please contact the Manager of Marketing and Communications, Cheryl Tataryn, at 613-248-3433 ext. 111or e-mail <a href="mailto:ctataryn@equinecanada.ca">ctataryn@equinecanada.ca</a> 
+  <p><a href="http://equinecanada.ca/index.php?option=com_content&amp;view=article&amp;id=613&amp;catid=799&amp;Itemid=229&amp;lang=en" target="_blank">Past Issues (Archives)
+    </a>
+  <p>This online version of Equine Canada Magazine requires <a href="http://www.adobe.com/support/flashplayer/downloads.html" target="_blank">Adobe Flash Player.</a></div>
+</div>

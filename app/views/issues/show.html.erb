@@ -1,0 +1,25 @@
+<div id="wrapp">
+<% if current_user %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Month:</b><br />
+  <%= @issue.title %>
+</p>
+
+<p>
+  <b>Link to online version:</b><br />
+  <%=link_to 'Online version', @issue.m_link %>
+</p>
+<p>
+  <b>Magazine cover (163px by 210px):</b><br />
+   <%= image_tag @issue.photo.url(:original) %>
+</p>
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>
+
+<% else %>
+<%= link_to "Log In", login_path %>
+<% end %>
+</div>
