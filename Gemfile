@@ -5,7 +5,9 @@ gem 'rails', '3.2.2'
 gem 'aws-s3'
 gem 'aws-sdk'
 
+gem 'sqlite3', :group => [:development, :test]
 group :production do
+  gem 'thin'
   gem 'pg'
 end
 
