@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+  <title>Magazine</title>
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<!--[if IE]>
+	<link rel="stylesheet" href="ie/ie.css" type="text/css" />
+	<![endif]-->
+  <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/issues.css?body=1" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/issues.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+  <link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="Lib8yripOVsVN5z0T2F0+rQVLjVT0B6+aGPVBhEXBpc=" name="csrf-token" />
+</head>
+<body>
+
+<div id="fb-root"></div>
+    <script type="text/javascript">
+        window.fbAsyncInit = function () {
+            FB.init({ appId: '168952596567340',
+                status: true,
+                cookie: true,
+                xfbml: true
+            });
+
+            //Autoresize iFrame               
+            FB.Canvas.setAutoGrow();
+        };
+    (function () {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js#xfbml=1';
+        document.getElementById('fb-root').appendChild(e);
+    } ());
+    </script>
+
+<div id="wrapp">
+	<div id="admin">
+	<a href="/issues/new">New Issue</a>  |  <a href="/">Logged in as denis@kishinevsky.ca</a>  |  <a href="/logout">Logout</a> 
+	</div>
+<div class="intro">
+  <h2>Equine Canada Magazine Online Edition</h2>
+  <p>Equine Canada is proud to present our official magazine, Equine Canada Magazine. The diversity of its contents truly represents the makeup of the equestrian community. Follow news and events of your favourite discipline including regular updates of the following:     Dressage, Driving, Endurance, Eventing, Hunter/Jumper, Para Equestrian, Recreation/Trail, Reining, Vaulting </p>
+  <p>Stay on top of current Equine Canada information as well as breeds and industry news and special features by subscribing now.</p>
+</div>
+<div class="popular">
+  <h4 class="i_publication ieTitle">Equine Canada Magazine</h4>
+	
+	<img id = "share_button" src = "https://equinecanada.s3.amazonaws.com/img/share.png">
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$('#share_button').live('click', function(e){
+	e.preventDefault();
+	FB.ui(
+	{
+	method: 'feed',
+	name: 'Equine Canada Magazine',
+	link: ' http://www.equinecanada.ca/',
+	picture: 'https://equinecanada.s3.amazonaws.com/img/share90x90.jpg',
+	caption: 'Equine Canada Magazine Online Edition',
+	description: 'Equine Canada is proud to present our official magazine, Equine Canada Magazine. The diversity of its contents truly represents the makeup of the equestrian community.',
+	message: ''
+	});
+	});
+	});
+	</script>
+<div id="over">
+  <ul class="magazine">
+   <li class="magBg"><span class="titleM">March / April</span>
+	<img alt="Original" src="https://s3.amazonaws.com/equinecanada/photos/17/original.jpg?1354911979" />
+	<span class="onlineLink ie_link"><a href="http://issuu.com/ctataryn/docs/ecm120203_v03-1?mode=window&amp;backgroundColor=%23222222" target="_blank">View online</a></span>
+	<a href="/issues/17/edit">Edit</a>  |  <a href="/issues/17" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Destroy</a>
+	</li>
+   <li class="magBg"><span class="titleM">January / February</span>
+	<img alt="Original" src="https://s3.amazonaws.com/equinecanada/photos/16/original.jpg?1354911746" />
+	<span class="onlineLink ie_link"><a href="http://issuu.com/ctataryn/docs/ecm120203_v03-1?mode=window&amp;backgroundColor=%23222222" target="_blank">View online</a></span>
+	<a href="/issues/16/edit">Edit</a>  |  <a href="/issues/16" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Destroy</a>
+	</li>
+   <li class="magBg"><span class="titleM">November / December</span>
+	<img alt="Original" src="https://s3.amazonaws.com/equinecanada/photos/15/original.jpg?1354911764" />
+	<span class="onlineLink ie_link"><a href="http://issuu.com/ctataryn/docs/ecm120203_v03-1?mode=window&amp;backgroundColor=%23222222" target="_blank">View online</a></span>
+	<a href="/issues/15/edit">Edit</a>  |  <a href="/issues/15" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Destroy</a>
+	</li>
+  </ul>
+</div>
+</div>
+<div class="bottom"><p> For more information about this fantastic magazine, please contact the Manager of Marketing and Communications, Cheryl Tataryn, at 613-248-3433 ext. 111or e-mail <a href="mailto:ctataryn@equinecanada.ca">ctataryn@equinecanada.ca</a> 
+  <p><a href="http://equinecanada.ca/index.php?option=com_content&amp;view=article&amp;id=613&amp;catid=799&amp;Itemid=229&amp;lang=en" target="_blank">Past Issues (Archives)
+    </a>
+  <p>This online version of Equine Canada Magazine requires <a href="http://www.adobe.com/support/flashplayer/downloads.html" target="_blank">Adobe Flash Player.</a></div>
+</div>
+
+</body>
+</html>
