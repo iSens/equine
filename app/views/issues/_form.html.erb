@@ -12,15 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Month %><br />
+    <%= f.label :Month %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :Link %> to online version<br />
+    <%= f.label :Link %>
     <%= f.text_field :m_link %>
   </div>
   <div class="field">
-      <%= f.label :Magazine, "Photo" %> cover photo (163px by 210px)<br />
+      <%= f.label :Magazine, "Photo" %> 
+	  <%= image_tag @issue.photo.url(:original) %><br />
       <%= f.file_field :photo %>
   </div>
   <div class="actions">

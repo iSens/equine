@@ -1,12 +1,11 @@
 <div id="wrapp">
 <% if current_user %>
-<h1>New issue</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', issues_path %>
-
+	<h1>New issue</h1>
+	<p>Before you add new issue, please remove <strong>(click destroy)</strong> the last issue.  <%= link_to 'Go back', issues_path %></p>
+	<p>If you have any questions, feel free to <a href="mailto:info@dlstudio.ca" >contact us</a>.
+	<img src="https://equinecanada.s3.amazonaws.com/img/delete-last.jpg"> 
+	<%= render 'form' %>
 <% else %>
-<%= link_to "Log In", login_path %>
+	<%= link_to "Log In", login_path %>
 <% end %>
 </div>
