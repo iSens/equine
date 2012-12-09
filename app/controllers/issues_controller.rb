@@ -1,7 +1,4 @@
 class IssuesController < ApplicationController
-  caches_page :index
-  before_filter(only: [:index]) { page_caching = true }
-  cache_sweeper :issue_sweeper
   
   def index
     @issues = Issue.order('created_at DESC')
